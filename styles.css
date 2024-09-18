@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Manrope";
+  background-color: hsl(218, 23%, 16%);
+}
+
+.card {
+  width: 90vw;
+  border-radius: 0.8rem;
+  background-color: hsl(217, 19%, 24%);
+  padding: 1.5rem;
+  transform: translateY(-3rem);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.number {
+  color: hsl(150, 100%, 66%);
+  margin: 1.2rem 0 1.6rem 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.32rem;
+  font-weight: 400;
+}
+
+.quote {
+  font-size: 1.4rem;
+  color: hsl(193, 38%, 86%);
+  line-height: 1.4;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+
+.number, .quote {
+  text-align: center;
+}
+
+.pattern {
+  width: 100%;
+  margin: 1.2rem 0;
+}
+
+.desktop {
+  display: none;
+}
+
+.svg-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-dice {
+  rotate: none;
+}
+
+.dice-bg {
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
+  padding: 1.2rem;
+  transform: translateY(75%);
+  transition: box-shadow 0.5s ease;
+  border: none;
+  cursor: pointer;
+  width: min-content;
+  margin: -2rem auto 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+  .desktop {
+    display: block;
+  }
+  
+  .mobile {
+    display: none;
+  }
+
+  .card {
+    width: 37.7vw;
+    padding: 1.6rem 2.8rem 0rem 2.8rem;
+    transform: translateY(-1rem);
+  }
+
+  .quote {
+    font-size: 1.7rem;
+  }
+
+  .pattern {
+    margin: 2.4rem 0;
+  }
+
+  .dice-bg {
+    padding: 1.3rem;
+    transform: translateY(50%);
+  }
+
+  .dice-bg:hover, .dice-bg:focus-visible {
+    box-shadow: 1px 1px 15px 8px hsl(150, 100%, 66%);
+    outline: none;
+  }
+}
